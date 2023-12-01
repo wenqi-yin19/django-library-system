@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<link href="../static/css/bootstrap-icons.css" rel="stylesheet">
+<link href="../static/css/dropzone.css" rel="stylesheet">
+<link href="../static/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="../static/css/prism-okaidia.css" rel="stylesheet">
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="../static/css/theme.min.css">
+  <title> Register</title>
+</head>
+
+<body class="bg-light">
+  <!-- container -->
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center g-0
+        min-vh-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xxl-4 py-8 py-xl-0">
+        <!-- Card -->
+        <div class="card smooth-shadow-md">
+          <!-- Card body -->
+          <div class="card-body p-6">
+            <div class="mb-4">
+              <a href="/register/" style="margin-left: 30%;font-size: 30px">Register</a>
+
+            </div>
+            <!-- Form -->
+            <form method="post" action="/register/">
+                 {% csrf_token %}
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name='email' required="required" class="form-control form-control-user" id="exampleInputEmail" placeholder="Please enter a valid email address in the format: xxxx@xx.com">
+              </div>
+
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" name="password"  required="required" class="form-control form-control-user" id="exampleInputPassword"  minlength="6" maxlength="20" placeholder="Please enter a password between 6-20 characters long">
+              </div>
+              <!-- Password -->
+              <div class="mb-3">
+                <label for="confirm-password" class="form-label">Confirm password
+                    </label>
+                <input type="password" name="passwordChecked" required="required" class="form-control form-control-user" id="exampleRepeatPassword" placeholder="The passwords must match!">
+              </div>
+
+
+              <!-- Checkbox -->
+              <div class="mb-3">
+   <div>
+{#                              账号类型:#}
+
+                                  <label>User</label><input type="radio" checked="checked" name="identype" value="user"/> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                  <label>Admin</label><input type="radio"  name="identype" value="admin"/>
+
+                          </div>
+              </div>
+              <div>
+                <!-- Button -->
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">
+                    Register
+                  </button>
+                </div>
+
+                <div class="d-md-flex justify-content-between mt-4">
+                  <div class="mb-2 mb-md-0">
+                    <a href="/login" class="fs-5" >Already have an account? Go to login</a>
+                  </div>
+                  <div>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Libs JS -->
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/bootstrap.bundle.min.js"></script>
+<script src="../static/js/jquery.slimscroll.min.js"></script>
+<script src="../static/js/feather.min.js"></script>
+<script src="../static/js/prism.js"></script>
+<script src="../static/js/apexcharts.min.js"></script>
+<script src="../static/js/dropzone.min.js"></script>
+<script src="../static/js/prism-toolbar.min.js"></script>
+<script src="../static/js/prism-copy-to-clipboard.min.js"></script>
+
+
+
+
+<!-- Theme JS -->
+<script src="../static/js/theme.min.js"></script>
+</body>
+
+</html>
